@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   validates :summary, length: {maximum: 10}
   validates :category, inclusion: {in: %w(Fiction, Non-Fiction)}
 
-  def not_click_bait
+  def click_bait
     title.present? && !title.include?("True Facts")
   end
 end
