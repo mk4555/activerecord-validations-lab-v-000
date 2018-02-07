@@ -9,6 +9,7 @@ class Post < ActiveRecord::Base
     if title.present?
       !title.include?("True Facts")
     else
+      false
     end
   end
 end
