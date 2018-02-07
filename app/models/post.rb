@@ -6,4 +6,6 @@ class Post < ActiveRecord::Base
 end
 
 class MyValidator < ActiveModel::Validator
+  def validate
+  end
 end
