@@ -5,8 +5,3 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: {in: %w(Fiction, Non-Fiction)}
 end
 
-class MyValidator < ActiveModel::Validator
-  def validate(record)
-    
-  end
-end
