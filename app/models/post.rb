@@ -6,6 +6,9 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: {in: %w(Fiction Non-Fiction)}
 
   def click_bait
-    title.present? || !title.include?("True Facts")
+    if title.present?
+      !title.include?("True Facts")
+    else
+    end
   end
 end
